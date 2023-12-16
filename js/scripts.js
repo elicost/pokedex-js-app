@@ -21,10 +21,14 @@ let pokemonRepository = (function () {
     }
 
     function add (pokemon) {
-        if (typeof pokemon === 'object') {
+        
+        if (Object.keys(pokemon).includes('name') &&
+            Object.keys(pokemon).includes('height') &&
+            Object.keys(pokemon).includes('types') &&
+           (typeof pokemon === 'object')) {
             pokemonList.push(pokemon);
         } else {
-            console.log('This is not an object');
+            console.log('This is not an object or is missing key values')
         }
     }
 
