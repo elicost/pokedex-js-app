@@ -21,7 +21,11 @@ let pokemonRepository = (function () {
     }
 
     function add (pokemon) {
-        pokemonList.push(pokemon);
+        if (typeof pokemon === 'object') {
+            pokemonList.push(pokemon);
+        } else {
+            console.log('This is not an object');
+        }
     }
 
     return {
