@@ -58,17 +58,5 @@ let pokemonRepository = (function () {
 })()
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-
-    function getPokemonDescription(pokemon) {
-        if (pokemon.height < 0.6) {
-            return ('<p>' + pokemon.name + ' (height: ' + pokemon.height + ') - Wow, that\'s small!</p>')
-        } else {
-            return ('<p>' + pokemon.name + ' (height: ' + pokemon.height + ')</p>')
-        }
-    }
-
-    let pokemonDescription = getPokemonDescription(pokemon);
-
-    document.write(pokemonDescription)
-
+    pokemonRepository.addListItem(pokemon);
 })
