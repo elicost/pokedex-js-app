@@ -1,4 +1,19 @@
 html {
-    height: 100%;
-    width: 100%;
-  }
+  height: 100%;
+  width: 100%;
+}
+
+.button-class {
+    background-color: #6495ed;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 16px;
+    padding: 10px 24px;
+    /* customize, erase bullet points, add webkit transitions, review CSS basics */
+}
