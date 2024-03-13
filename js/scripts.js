@@ -63,7 +63,7 @@ let pokemonRepository = (function () {
         })
     }
 
-    function loadDetails() {
+    function loadDetails(item) {
         let url = item.detailsUrl;
         return fetch(url).then(function (response) {
             return response.json();
